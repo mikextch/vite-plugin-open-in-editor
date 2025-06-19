@@ -7,4 +7,11 @@ export default defineConfig({
   sourcemap: true,
   clean: true,
   target: "node16",
+  splitting: false,
+  treeshake: true,
+  external: ["vite"],
+  noExternal: [],
+  esbuildOptions(options) {
+    options.platform = "node";
+  },
 });

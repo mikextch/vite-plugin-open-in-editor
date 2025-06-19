@@ -31,7 +31,10 @@ Inside your `vite.config.ts`:
 
 ```typescript
 import { defineConfig } from "vite";
+// You can use either import syntax:
 import openInEditor from "vite-plugin-open-in-editor";
+// OR
+import { openInEditor } from "vite-plugin-open-in-editor";
 
 export default defineConfig({
   plugins: [

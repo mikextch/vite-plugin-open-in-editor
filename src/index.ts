@@ -3,13 +3,11 @@ import { parseFileParam } from "./parser";
 import { openFile } from "./opener";
 
 export interface OpenInEditorOptions {
-  editorBin?: "cursor" | "vscode";
+  editorBin?: string;
   log?: boolean;
 }
 
-export default function vitePluginOpenInEditor(
-  options: OpenInEditorOptions = {}
-): Plugin {
+function vitePluginOpenInEditor(options: OpenInEditorOptions = {}): Plugin {
   const { editorBin = "cursor", log = false } = options;
 
   return {
@@ -46,3 +44,7 @@ export default function vitePluginOpenInEditor(
     },
   };
 }
+
+// Export both as default and named export for flexibility
+export default vitePluginOpenInEditor;
+export { vitePluginOpenInEditor as openInEditor };

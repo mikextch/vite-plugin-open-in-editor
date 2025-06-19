@@ -26,7 +26,10 @@ This is the initial release of `vite-plugin-open-in-editor`, a powerful Vite plu
 
    ```typescript
    import { defineConfig } from "vite";
+   // You can use either import syntax:
    import openInEditor from "vite-plugin-open-in-editor";
+   // OR
+   import { openInEditor } from "vite-plugin-open-in-editor";
 
    export default defineConfig({
      plugins: [
@@ -72,6 +75,8 @@ This is the initial release of `vite-plugin-open-in-editor`, a powerful Vite plu
 
 #### v0.1.0 (Planned)
 
+- [ ] Support for WebStorm editor
+- [ ] Support for Sublime Text
 - [ ] Custom editor path configuration
 - [ ] Better error handling and user feedback
 

@@ -2,9 +2,17 @@
   "name": "vite-plugin-open-in-editor",
   "version": "0.0.3",
   "description": "Vite plugin to open files directly in any editor (Cursor, VSCode, etc) from Alt+Click or Qwik dev tools.",
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
   "scripts": {
     "build": "tsup",
     "prepublishOnly": "npm run build"
